@@ -1,5 +1,5 @@
 Do a ping sweep to check if the host is alive?
 
 ```
-for i in {191..204}; do if ping x.x.x.$i -c 1 -W 1 ; then echo "Host $i is reachable."; else echo "Host $i is unreachable."; fi; done
+prefix="x.y.z"; for i in {1..20}; do if ping $prefix.$i -c 1 -W 1 ; then echo "Host $prefix.$i is reachable."; else echo "Host $prefix.$i is unreachable."; fi; done
 ```
